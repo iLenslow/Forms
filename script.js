@@ -52,6 +52,6 @@ function showForm() {
         const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
     
         console.log("?? Generierte URL:", finalUrl); // Optional: zum Debuggen
-        window.open(finalUrl, "_blank");
+        window.open(finalUrl);
     });
 }

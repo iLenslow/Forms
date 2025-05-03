@@ -35,22 +35,23 @@ function showForm() {
         `;
     }
 
-    document.getElementById("entryForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-        const selection = document.getElementById("entrySelect").value;
-        const formData = new FormData(event.target);
-        const params = [];
-    
-        formData.forEach((value, key) => {
-            const paramName = key.replace(/\s+/g, ''); // Leerzeichen im Namen entfernen
-            const paramValue = value.trim() === "" ? "blank" : value.trim();
-            params.push(`${encodeURIComponent(paramName)}=${encodeURIComponent(paramValue)}`);
-        });
-    
-const baseUrl = "http://192.168.101.110/dw/trigger"; // ohne führenden Slash
-const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
-console.log("Generierte URL:", finalUrl);
-window.open(finalUrl, "_blank");
-    });
 }
+document.getElementById("entryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const selection = document.getElementById("entrySelect").value;
+    const formData = new FormData(event.target);
+    const params = [];
+
+    formData.forEach((value, key) => {
+        const paramName = key.replace(/\s+/g, ''); // Leerzeichen im Namen entfernen
+        const paramValue = value.trim() === "" ? "blank" : value.trim();
+        params.push(`${encodeURIComponent(paramName)}=${encodeURIComponent(paramValue)}`);
+    });
+
+    const baseUrl = "http://192.168.101.110/dw/trigger";
+    const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
+
+    console.log("?? Generierte URL:", finalUrl); // Optional: zum Debuggen
+    window.open(finalUrl);
+});

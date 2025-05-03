@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Document</title>
+  <title>Wahl & Co. - Listen und Tabellen</title>
 </head>
 <body>
   <header>
-  </header>
-  <main>
-    <h2>Eintrag auswählen</h2>
+    <div class="head">
+    <div>
+      <img src="source/Logo.png" id="Logo">
+    </div>
+    <div class="select">
     <select id="entrySelect" onchange="showForm()">
-        <option value="">-- Bitte wählen --</option>
+        <option value="">Liste Auswählen</option>
         <option value="Zollausgang">ATC Abfrage</option>
         <option value="Zolleingang">Tournummer Abfrage</option>
         <option value="Kundenperformance">Kundenperformance</option>
     </select>
-
+    </div>
+    </div>
+  </header>
+  <main>
     <div id="formContainer">
         <h3 id="formTitle"></h3>
         <form id="entryForm">
@@ -28,6 +33,9 @@
     </div>
   </main>
   <footer>
+    <div id="1">
+      <p>Hier könnte Ihre Werbung stehen.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>

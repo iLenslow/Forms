@@ -1,0 +1,126 @@
+:root{
+    --main-color: #ffffff;
+    --main-green: #2ca737;
+    --hover-green: #228b2b;
+    --bg-img: url("source/background.png");
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    max-height: 130px;
+}
+.head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    gap: 30px;
+}
+#Logo {
+    max-height: 60px;
+    height: auto;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+#entrySelect {
+    margin-top: 3px;
+}
+
+#formContainer {
+    display: none;
+    border: 1px solid var(--main-green);
+    padding: 20px;
+    width: 300px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    position: center;
+    padding: 5px;
+}
+input{
+    margin-left: 10px;
+}
+#entrySelect {
+    min-width: 200px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: white;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpolygon%20fill%3D%22white%22%20points%3D%220%2C0%2020%2C0%2010%2C10%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 13px;
+}
+#entrySelect:hover,
+#entrySelect:focus {
+    background-color: var(--hover-green);
+    outline: none;
+}
+#entryForm button {
+    display: block;
+    margin: 20px auto 0 auto;  /* oben 20px Abstand, horizontal zentriert */
+    padding: 10px 20px;
+    background-color: var(--main-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#entryForm button:hover {
+    background-color: var(--hover-green);
+}
+
+footer{
+    width: 100%;
+    background-color: var(--main-green);
+    color: var(--main-color);
+    text-align: center;
+    line-height: 20vh;
+}
+
+#1{
+    align-items: center;
+}

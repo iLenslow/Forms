@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <h2>Eintrag auswählen</h2>
+    <select id="entrySelect" onchange="showForm()">
+        <option value="">-- Bitte wählen --</option>
+        <option value="Zollausgang">ATC Abfrage</option>
+        <option value="Zolleingang">Tournummer Abfrage</option>
+        <option value="Kundenperformance">Kundenperformance</option>
+    </select>
+
+    <div id="formContainer">
+        <h3 id="formTitle"></h3>
+        <form id="entryForm">
+            <div id="formFields"></div>
+            <button type="submit">Absenden</button>
+        </form>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

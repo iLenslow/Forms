@@ -48,7 +48,7 @@ function showForm() {
             params.push(`${encodeURIComponent(paramName)}=${encodeURIComponent(paramValue)}`);
         });
     
-        const baseUrl = "192.168.101.110/dw/trigger";
+        const baseUrl = "http://192.168.101.110/dw/trigger";
         const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
     
         console.log("?? Generierte URL:", finalUrl); // Optional: zum Debuggen

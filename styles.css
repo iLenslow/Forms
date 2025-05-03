@@ -51,7 +51,7 @@ header {
 .select {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     margin-left: 20px;
 }
 #entrySelect {
@@ -78,7 +78,9 @@ input{
     margin-left: 10px;
 }
 #entrySelect {
-    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
     padding: 10px 15px;
     font-size: 16px;
     border: none;
@@ -124,3 +126,8 @@ footer{
 #1{
     align-items: center;
 }
+@media (max-width: 400px) {
+    #entrySelect {
+      max-width: 90vw;  /* max 90% der Bildschirmbreite */
+    }
+  }

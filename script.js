@@ -48,7 +48,7 @@ document.getElementById("entryForm").addEventListener("submit", function(event) 
         params.push(`${encodeURIComponent(paramName)}=${encodeURIComponent(paramValue)}`);
     });
 
-    const baseUrl = "http://192.168.101.110/dw/trigger";
+    const baseUrl = "http://Placeholder.lenslow/dw/trigger";
     const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
 
     console.log("🌐 Generierte URL:", finalUrl);

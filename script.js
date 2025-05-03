@@ -48,10 +48,9 @@ function showForm() {
             params.push(`${encodeURIComponent(paramName)}=${encodeURIComponent(paramValue)}`);
         });
     
-        const baseUrl = "http://192.168.101.110/dw/trigger";
-        const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
-    
-        console.log("?? Generierte URL:", finalUrl); // Optional: zum Debuggen
-        window.open(finalUrl);
+const baseUrl = "http://192.168.101.110/dw/trigger"; // ohne führenden Slash
+const finalUrl = `${baseUrl}/${selection}?${params.join("&")}`;
+console.log("Generierte URL:", finalUrl);
+window.open(finalUrl, "_blank");
     });
 }

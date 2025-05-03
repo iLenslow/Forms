@@ -34,7 +34,7 @@ function showForm() {
         
         `;
     }
-// 🔁 Wird nur einmal gesetzt – außerhalb von showForm()
+}
 document.getElementById("entryForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -54,5 +54,3 @@ document.getElementById("entryForm").addEventListener("submit", function(event) 
     console.log("🌐 Generierte URL:", finalUrl);
     window.open(finalUrl, "_blank");
 });
-
-}

@@ -1,0 +1,62 @@
+.headerInner {
+  height: var(--header-large);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: height 0.3s ease;
+}
+
+#Logo {
+  max-height: var(--logo-large);
+  transition: max-height 0.3s ease;
+}
+
+.Logo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  transform-origin: center center; /* Ensure it expands from the center */
+}
+header.scrolled::after{
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+header.scrolled .Logo {
+  background: linear-gradient(180deg, rgba(0, 255, 255), transparent);
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transform: scaleX(1); /* Make sure it doesn't scale before hover */
+  transform: scaleY(1);
+  margin-left: 30px;
+}
+
+header.scrolled .headerInner {
+  height: var(--header-small);
+  padding: 0px 20px;
+}
+
+header.scrolled #Logo {
+  max-height: var(--logo-small);
+  margin: 0;
+  padding: 0;
+}
+
+header.scrolled .Logo:hover {
+  transform: scale(1.2); /* Expand symmetrically left and right */
+}
+
+header.scrolled .headerInner:hover {
+  max-height: 105px;
+}
+header .headerContainer{
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+header.scrolled .headerContainer {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}

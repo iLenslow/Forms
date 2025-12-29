@@ -1,53 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lenslow</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header id="mainHeader">
-    <div class="headerInner">
-      <div class="Logo"  id="scrollToTopBtn">
-        <img src="assets/WoT-black.png" id="Logo">
-      </div>
-      <div class="headerContainer">
-        <div class="headerRight"></div>
-        <div class="headerCenter">
-          <div class="navBar gradient-underline" id="homeBtn">Home</div>
-          <div class="navBar gradient-underline" id="aboutBtn">About</div>
-          <div class="navBar gradient-underline" id="socialsBtn">Socials</div>
-          <div class="navBar gradient-underline" id="contactBtn">Contact</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenslow</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://unpkg.com/vanta/dist/vanta.fog.min.js"></script>
+    <script src="https://unpkg.com/vanta/dist/vanta.net.min.js"></script>
+    <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+  type="module"></script>
+  </head>
+  <body>
+    <div id="vanta-bg" aria-hidden="true"></div>
+    <div class="background-blur-layer" aria-hidden="true"></div>
+    <header id="mainHeader">
+      <div class="headerInner">
+        <div class="Logo" id="scrollToTopBtn">
+          <img src="assets/WoT-black.png" id="Logo" alt="Lenslow Logo" />
         </div>
-        <div class="headerLeft"></div>
+        <div class="headerContainer">
+          <div class="headerRight"></div>
+          <div class="headerCenter">
+            <div class="navBar gradient-underline" id="homeBtn" data-i18n-key="nav_home">Home</div>
+            <div class="navBar gradient-underline" id="aboutBtn" data-i18n-key="nav_about">Über mich</div>
+            <div class="navBar gradient-underline" id="socialsBtn" data-i18n-key="nav_socials">Socials</div>
+            <div class="navBar gradient-underline" id="contactBtn" data-i18n-key="nav_contact">Kontakt</div>
+          </div>
+          <div class="headerLeft"></div>
+        </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="section" id="homeSection">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt eius recusandae tempore nemo sed sapiente at officia omnis inventore necessitatibus expedita natus corrupti commodi quibusdam, id dolor, aspernatur tenetur dolorem!</p>
-    </div>
-    <div class="section" id="aboutSection">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt eius recusandae tempore nemo sed sapiente at officia omnis inventore necessitatibus expedita natus corrupti commodi quibusdam, id dolor, aspernatur tenetur dolorem!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt eius recusandae tempore nemo sed sapiente at officia omnis inventore necessitatibus expedita natus corrupti commodi quibusdam, id dolor, aspernatur tenetur dolorem!</p>
-  </div>
-    <div class="section" id="socialsSection">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt eius recusandae tempore nemo sed sapiente at officia omnis inventore necessitatibus expedita natus corrupti commodi quibusdam, id dolor, aspernatur tenetur dolorem!</p>
-  </div>
-    <div class="section" id="contactSection">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt eius recusandae tempore nemo sed sapiente at officia omnis inventore necessitatibus expedita natus corrupti commodi quibusdam, id dolor, aspernatur tenetur dolorem!</p>
-  </div>
-  </main>
-  <footer>
-    <div class="footerContainer">
-      <div class="footerRight"></div>
-      <div class="footerCenter"></div>
-      <div class="footerLeft"></div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-  <script src="scriptHeader.js"></script>
-</body>
+    </header>
+    <main>
+      <div class="section" id="homeSection">
+        <div class="container">
+          <div class="split">
+            <div class="content">
+              <div class="anileft">
+                <h1 data-i18n-key="home_title">Willkommen</h1>
+                <p data-i18n-key="home_p1">Ich bin Merrick.</p>
+                <p data-i18n-key="home_p2">
+                  Ich arbeite in der IT, beschäftige mich leidenschaftlich mit Technik
+                  und mag Projekte, bei denen man sich vollständig in ein Problem
+                  vertiefen kann.
+                </p>
+                <p data-i18n-key="home_p3">
+                  Diese Website gibt einen Einblick in meine beruflichen Schwerpunkte,
+                  meine privaten IT-Projekte und ein paar Dinge, die mich abseits des
+                  Codes interessieren.
+                </p>
+              </div>
+            </div>
+            <div class="aside-spacer anidot" aria-hidden="true">
+              <dotlottie-wc
+                src="assets/WoT Animated.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="section" id="aboutSection">
+        <div class="container">
+          <!-- H1 #2: Über mich (reverse: empty left) -->
+          <div class="split reverse">
+            <div class="aside-spacer anidot" aria-hidden="true">
+              <dotlottie-wc
+                src="assets/Me.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+            <div class="content">
+              <div class="aniright">
+                <h1 data-i18n-key="about_title">Über mich</h1>
+                <p data-i18n-key="about_p1">
+                  Ich bin ein eher zurückhaltender Mensch und brauche etwas Zeit, um aufzutauen. Wenn das Eis aber gebrochen ist, arbeite ich fokussiert, strukturiert und mit viel Freude an komplexen Aufgaben.
+                </p>
+                <p data-i18n-key="about_p2">
+                  Besonders schätze ich ruhige Arbeitsumgebungen – im Homeoffice bin ich deutlich produktiver als im Büro. Mit lauter Musik auf den Kopfhörern kann ich mich voll auf ein Projekt konzentrieren und alles andere ausblenden. Genau das macht für mich den Reiz von Problemlösung und Projektarbeit aus – sie sind für mich fast schon eine Form von Entspannung.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="spacer"></div>
+
+          <!-- H1 #3: Berufliches (normal: empty right) -->
+          <div class="split">
+            <div class="content">
+              <div class="anileft">
+                <h1 data-i18n-key="work_title">Berufliches</h1>
+                <p data-i18n-key="work_p1">
+                  Beruflich bin ich in der IT tätig, mit Schwerpunkt im EDI-Bereich.
+                  Ich entwickle und betreue Schnittstellen für eine Spedition, hauptsächlich mit der Middleware Lobster Data. Dabei geht es um den zuverlässigen Austausch von Daten zwischen unterschiedlichen Systemen – ein Bereich, der sowohl technisches Verständnis als auch Prozessdenken erfordert.
+                </p>
+                <p data-i18n-key="work_p2">
+                  Mein Weg in die IT war nicht ganz geradlinig:<br />
+                  Nach einem begonnenen, aber nicht abgeschlossenen Studium der Anglistik und Geschichte habe ich eine Ausbildung zum Kaufmann für Spedition und Logistikdienstleistungen abgeschlossen. Bereits während der Ausbildung habe ich mich intensiv mit EDI-Themen weitergebildet, was schließlich auch meinen heutigen beruflichen Schwerpunkt geprägt hat.
+                </p>
+              </div>
+            </div>
+            <div class="aside-spacer anidot" aria-hidden="true">
+              <dotlottie-wc
+                src="assets/Data Integration Specialist.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+          </div>
+          <div class="spacer"></div>
+
+          <!-- H1 #4: IT & Projekte (reverse: empty left) -->
+          <div class="split reverse">
+            <div class="aside-spacer anidot" aria-hidden="true">
+              <dotlottie-wc
+                src="assets/Website Developer.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+            <div class="content">
+              <div class="aniright">
+                <h1 data-i18n-key="it_title">IT & Projekte</h1>
+                <p data-i18n-key="it_p1">
+                  Mein technisches Interesse geht weit über den Job hinaus.
+                </p>
+                <p data-i18n-key="it_p2">In meiner Freizeit beschäftige ich mich unter anderem mit:</p>
+                <ul>
+                  <li data-i18n-key="it_list_1">Homeservern</li>
+                  <li data-i18n-key="it_list_2">Front-End Development</li>
+                  <li data-i18n-key="it_list_3">AI Image Generation mit Stable Diffusion</li>
+                </ul>
+                <p data-i18n-key="it_p3">
+                  Mich reizen vor allem Projekte, die einen echten Nutzen haben oder ein konkretes Problem lösen. Reines „Lernen um des Lernens willen“ motiviert mich weniger – nachhaltige Motivation entsteht für mich erst dann, wenn ein Projekt sinnvoll einsetzbar ist.
+                </p>
+                <p data-i18n-key="it_p4">
+                  Zukünftig möchte ich mich gerne intensiver mit C# und Backend-Development beschäftigen. <br />
+                  Aktuell fehlt mir noch das passende Projekt, das sowohl technisch spannend ist als auch langfristigen Mehrwert bietet. <br />
+                  Außerdem möchte ich ein Kubernetes-Cluster aufsetzen, auch wenn ich noch nicht genau weiß, wofür ich es nutzen werde.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="spacer"></div>
+
+          <!-- H1 #5: Musik (full-width text aligned left) -->
+          <div class="split">
+            <div class="content">
+              <div class="anileft">
+                <h1 data-i18n-key="music_title">Musik</h1>
+                <p data-i18n-key="music_p1">
+                  Neben der Technik spielt Musik eine große Rolle in meinem Alltag.
+                  Mein Geschmack ist breit gefächert, mit einem klaren Hang zu intensiveren Genres:
+                </p>
+                <ul>
+                  <li data-i18n-key="music_list_1">Metalcore</li>
+                  <li data-i18n-key="music_list_2">Hard Techno</li>
+                  <li data-i18n-key="music_list_3">Psytrance</li>
+                </ul>
+                <p data-i18n-key="music_p2">
+                  Gleichzeitig höre ich aber genauso gern klassische Musik oder japanischen City Pop.
+                  Musik hilft mir, mich zu konzentrieren, abzuschalten und in den richtigen Flow zu kommen –
+                  besonders beim Arbeiten.
+                </p>
+              </div>
+            </div>
+            <div class="aside-spacer anidot" aria-hidden="true">
+              <dotlottie-wc
+                src="assets/Metal Music.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="socialsSection">
+        <div class="container">
+          <div class="split reverse">
+            <div class="content">
+              <div class="aniright">
+                <h1 data-i18n-key="socials_title">Socials</h1>
+                <p data-i18n-key="socials_p1">
+                  Folg mir hier!
+                </p>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/in/merrick-freischl e4ger-7b31322a7/" target="_blank" rel="noopener noreferrer">
+                    <dotlottie-wc
+                      src="assets/linkedin 2.lottie"
+                      background="transparent"
+                      speed="1"
+                      loop
+                      autoplay
+                      style="width: 100px; height: 100px;"
+                      aria-hidden="true">
+                    </dotlottie-wc>
+                  </a>
+                  <a href="https://github.com/iLenslow" target="_blank" rel="noopener noreferrer">
+                    <dotlottie-wc
+                      src="assets/github 2.lottie"
+                      background="transparent"
+                      speed="1"
+                      loop
+                      autoplay
+                      style="width: 100px; height: 100px;"
+                      aria-hidden="true">
+                    </dotlottie-wc>
+                  </a>
+                  <a href="https://www.instagram.com/merrick.frei" target="_blank" rel="noopener noreferrer">
+                    <dotlottie-wc
+                      src="assets/instagram 1.lottie"
+                      background="transparent"
+                      speed="1"
+                      loop
+                      autoplay
+                      style="width: 100px; height: 100px;"
+                      aria-hidden="true">
+                    </dotlottie-wc>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="aside-spacer" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="contactSection">
+        <div class="container">
+          <div class="split">
+            <div class="content">
+              <div class="anileft">
+                <h1 data-i18n-key="contact_title">Kontakt</h1>
+                <form class="contact-form" action="https://formspree.io/f/meeqvezl" method="POST" >
+                  <div class="form-row">
+                    <label for="name" data-i18n-key="form_name_label">Name</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-row">
+                    <label for="email" data-i18n-key="form_email_label">E-Mail</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div class="form-row">
+                    <label for="message" data-i18n-key="form_message_label">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-primary" data-i18n-key="form_send_button">Senden</button>
+                </form>
+              </div>
+            </div>
+            <div class="aside-spacer anidot" aria-hidden="true">
+                            <dotlottie-wc
+                src="assets/Email.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 260px; height: 260px; margin: 0 auto;"
+                aria-hidden="true">
+              </dotlottie-wc>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerContainer">
+        <div class="footerLeft"></div>
+        <div class="footerCenter">
+          <div class="language-selector">
+            <span data-i18n-key="language_label">Language</span>
+            <select id="languageSelect">
+              <option value="de">Deutsch</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="footerRight">
+          <label class="toggle-wrapper" for="themeToggle">
+            <span class="toggle-text" data-i18n-key="theme_label">Theme</span>
+            <span class="toggle-switch">
+              <input type="checkbox" id="themeToggle">
+              <span class="slider"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="scriptHeader.js"></script>
+  </body>
 </html>

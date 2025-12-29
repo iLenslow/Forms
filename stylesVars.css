@@ -1,8 +1,24 @@
 :root {
-  --bg-main: #1f2436;
+  --bg-main-dark: #1f2436;
+  --bg-main-light: #d1d1d1;
   --logo-large: 120px;
   --logo-small: 50px;
   --header-large: 160px;
   --header-small: 70px;
-  --accent: aqua;
+  --accent-dark: aqua;
+  --accent-light: #ff2727;
+  --text-main-dark: white;
+  --text-main-light: black;
+  /* Layout */
+  --page-max-width: 1080px;
+  --page-gutter: 20px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --radius-md: 12px;
+  --shadow-soft: 0 6px 24px rgba(0,0,0,0.16);
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
